@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Google Drive Test</string>
+
+    <string name="permission_dialog_title">権限について</string>
+    <string name="permission_dialog_message">Google Driveに接続するためのアカウント情報を連絡先から取得します。\nそのため連絡先へのアクセス権限が必要になります。</string>
+    <string name="backup_delete_title">test.txtの削除</string>
+    <string name="backup_delete_message">test.txtをGoogle Driveから削除しますか？</string>
+    <string name="backup_delete_complete">test.txtを削除しました</string>
+    <string name="backup_not_found">test.txtが見つかりません！</string>
+</resources>

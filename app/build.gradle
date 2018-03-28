@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "gms.com.swapp.googledrivetest"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // Drive API ( http://code.google.com/p/google-api-java-client/wiki/APIs#Drive_API )
+    compile 'com.google.android.gms:play-services:3.1.36+'
+    compile 'com.google.apis:google-api-services-drive:v3-rev101-1.23.0'
+    compile 'com.google.api-client:google-api-client-android:1.23.0'
+    compile 'com.google.http-client:google-http-client-gson:1.23.0'
+}
+
+repositories {
+    mavenCentral()
+}
